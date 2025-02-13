@@ -1,0 +1,21 @@
+version: "3"
+services:
+  backend:
+    build: ./backend
+    container_name: real-time-dashboard-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - UVICORN_CMD=uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: ./dashboard-frontend
+    container_name: real-time-dashboard-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dashboard-frontend:/app
+    stdin_open: true
+    tty: true
