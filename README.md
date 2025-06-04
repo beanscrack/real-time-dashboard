@@ -1,0 +1,1 @@
+This is a full-stack web application built with FastAPI (Python) as the backend and React.js as the frontend. The backend serves a REST API that fetches and filters trending GitHub repositories, while the frontend provides an interactive UI to display them. The entire stack is containerized with Docker for easy setup and deployment.
